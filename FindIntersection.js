@@ -1,14 +1,13 @@
 //Find Intersection
-//Given the following input containing two sequences of csv, output the intersecting numbers. If there are none return false
+//Given the following input containing two sequences of csv, output the ordered intersecting numbers. If there are none return false
 // ["1, 2, 5, 7, 13", "1, 4, 7, 13, 28"]
 //console.log("test");
-var numberSeq = ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"];//["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"];//["1, 2, 5, 7, 13", "1, 4, 7, 13, 28"];
 
+var numberSeq = ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"];//["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"];//["1, 2, 5, 7, 13", "1, 4, 7, 13, 28"];
 
 FindIntersectionForce(numberSeq);
 FindIntersectionHash(numberSeq);
-FindIntersectionMapsless(numberSeq);
-
+//FindIntersectionMapsless(numberSeq);
 
 //Brute Force
 function FindIntersectionForce(strArr)
@@ -25,7 +24,7 @@ function FindIntersectionForce(strArr)
     //time complexity O(n*m)
     for (let i = 0; i < listOneLength; i++) 
     {
-        console.log(listOne[i]);
+        //console.log(listOne[i]);
        for(let j=0; j<listTwoLength; j++)
        {
             let currentListOneItem = listOne[i];
@@ -59,7 +58,6 @@ function FindIntersectionHash(strArr)
 
     let t1 = performance.now();
 
-    //
     firstList.forEach(num => matchMap[num] = true);
 
     secondList.forEach(num => {
@@ -78,8 +76,17 @@ function FindIntersectionHash(strArr)
     }
     else
     {
-        close.log('No intersection found');
+        console.log('No intersection found');
     }
+}
+
+//Array iteration without nested loop
+/*function FindIntersectionArrIt(strArr)
+{
+    const stringArray = strArr.split(', ');  
+    var i =1 ;
+    stringArray.forEach(createArr)
+
 }
 
 //no mapping O(2*n)
@@ -114,4 +121,4 @@ function FindIntersectionMapsless(strArr)
     {
         close.log('No intersection found');
     }
-}
+}*/
