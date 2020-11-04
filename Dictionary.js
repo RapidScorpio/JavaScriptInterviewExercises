@@ -1,3 +1,4 @@
+console.log('ok starting dictionary js');
 /*
 
 bring back an arr of the v
@@ -22,3 +23,21 @@ if the key did not exist it would add the key and the arr
 if the key did exist then get the current arr from the map and pop the next value to the arr,
 store that arr in the map
 */
+
+
+const user = [{FirstName:'John', Lastname:'Doe', Age:30},{FirstName:'John', Lastname:'Allen', Age:65}, {FirstName:'Tina', Lastname:'Doe', Age:30} ];
+
+
+getArrByKey(user, user.FirstName);
+
+function getArrByKey(arr, getByKey)
+{
+    //get the key to use
+    let key = getByKey;
+
+    console.log(key);
+
+    //make a map and populate it based on the key
+
+
+}
